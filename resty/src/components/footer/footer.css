@@ -1,0 +1,28 @@
+/* 
+footer{
+    text-align: left;
+
+    background-color: rgb(146, 146, 146);
+
+    font-size: 140%;
+
+    padding-top: 10px;
+
+    padding-bottom: 10px;
+
+    position: relative;
+} */
+
+footer{
+    position: fixed;
+    font-size: 140%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(146, 146, 146);
+    color: white;
+    text-align: left;
+    padding-top: 10px;
+
+    padding-bottom: 10px;
+}
