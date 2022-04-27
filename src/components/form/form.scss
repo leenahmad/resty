@@ -21,13 +21,6 @@ form {
 
  } 
 
- #text{
-  margin-block-start: 6em;
-  margin-block-end: 6em;
-  margin-inline-start: 8px;
-  margin-inline-end: 8px;
-} 
-
 
 #buttons{
   margin-bottom: 20px;
@@ -83,23 +76,7 @@ form {
 
 textarea {
 
-  width: 75%;
-
-  height: 300px;
-
-  padding: 12px 20px;
-
-  box-sizing: border-box;
-
-  border: 2px solid rgb(0, 0, 0);
-
-  border-radius: 2px;
-
-  background-color: #ebe2e2;
-
-  font-size: 20px;
-
-  resize: none;
-  margin-left: 200px;
+  width: 810px;
+  height: 200px;
 
 }

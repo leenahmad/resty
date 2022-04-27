@@ -1,0 +1,24 @@
+
+section{
+    .div{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin: 0 auto;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        
+
+    }
+}
+.res{
+    border-style: outset;
+    background-color: rgb(255, 255, 255);
+    border-radius: 9px;
+    width: 60%;
+    height: 300px;
+    padding: 10px;
+    margin: 0 0 0 20%;
+    overflow: auto;
+    
+}
