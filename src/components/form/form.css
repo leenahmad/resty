@@ -10,23 +10,23 @@ form {
 
 }
 
-#urlMethod{
+ #urlMethod{
   width: 50%;
   margin: 28px auto;
   justify-content: space-around;
-  /* text-align: center; */
-  border: 2px solid gray;
+  text-align: center; 
+   border: 2px solid gray;
   background: rgb(245, 240, 240);
-  padding: 100px;
+  padding: 100px; 
 
-}
+ } 
 
-#text{
+ #text{
   margin-block-start: 6em;
   margin-block-end: 6em;
   margin-inline-start: 8px;
   margin-inline-end: 8px;
-}
+} 
 
 
 #buttons{
@@ -79,4 +79,27 @@ form {
 .button4:hover {
   background-color: #ffffff;
   color: black;
+}
+
+textarea {
+
+  width: 75%;
+
+  height: 300px;
+
+  padding: 12px 20px;
+
+  box-sizing: border-box;
+
+  border: 2px solid rgb(0, 0, 0);
+
+  border-radius: 2px;
+
+  background-color: #ebe2e2;
+
+  font-size: 20px;
+
+  resize: none;
+  margin-left: 200px;
+
 }
