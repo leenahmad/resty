@@ -1,87 +1,87 @@
 import React from "react";
+import './form.scss'
 
-import './form.css'
+import { useState } from "react";
 
-class Form extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            url: '',
-            method: '',
+
+
+
+
+function Form (props){
+    
+    const [url , setUrl] = useState()
+    const [method , setMethod] = useState('GET')
+    const [body , setBody] = useState()
+
+    const urlClicker = (e) =>{
+       e.preventDefault();
+       const Data = {
+           url: url,
+           method: method,
+           body: null,
+
+       }
+       if(body){
+           Data.body = body      
+         }else{
+
+          props.handleApiCall(Data);
         }
-        this.handleUrl = this.handleUrl.bind(this);
-        this.urlClicker = this.urlClicker.bind(this);
-        this.changeMethod = this.changeMethod.bind(this);
-    };
-
-    urlClicker(e){
-        e.preventDefault();
-        this.setState({
-            url:this.state.input,
-            method: this.state.method1,
-        })
     }
 
-    handleUrl(e) {
+    const  handleUrl = (e)=> {
         e.preventDefault();
-        this.setState({
-            input: e.target.value
-        })
+        setUrl(e.target.value);
     }
 
-    changeMethod(e)  {
+    const  changeMethod = (e) => {
         e.preventDefault();
-        this.setState({
-    
-            method1: e.target.value
-        })
+        
+            setMethod(e.target.value) ;
+       
     }
 
-    // handleChange(event){
-    //     let url =  event.target.value;
-    //     this.setState({url})
-    
-    // }
+    const handlebody = (e) => {
+        e.preventDefault();
+        setBody(e.target.value)
 
-    // handleSubmit(event){
-    //     event.preventDefault();
-    // }
+    }
 
-    // handleButton(event){
-    //     let method = event.target.value;
-    //     this.setState({method});
-    // }
+   
+     return (
+    <>
+     
+      <form onSubmit={urlClicker}>
+      <div>
+      <label>
+      <input name='url' type='text' onChange={handleUrl} />
+       
+       </label>
+       <button type="button"  onClick={urlClicker} >GO!</button>
+       <div id="buttons">
 
-
-    render(){
-        return(
+       
+          <input type="button" className="button1"  value="GET" onClick={changeMethod} />
+            
+          <input className="button2" type="button" value="POST"  onClick={changeMethod}/>
+          <input className="button3"  type="button" value="PUT"  onClick={changeMethod}/>
+          <input className="button4" type="button" value="DELETE" onClick={changeMethod}/>
+          <input className="button5"  type="button" value="PATCH"  onClick={changeMethod}/>
+          </div>
+       
+        
+        <div>
             <div>
-                <form>
-                    <label>
-                        URL :  &nbsp;
-                        <input type="text" placeholder="Enter URL" required onChange={this.handleUrl}></input>
-                    </label>
-                    <button type="button"  onClick={this.urlClicker}>
-                       Submit
-                    </button>
-                    <div id="buttons">
-                        <input className="button1" type="button" value="GET" onClick={this.changeMethod}/>
-                        <input className="button2" type="button" value="POST" onClick={this.changeMethod}/>
-                        <input className="button3" type="button" value="PUT" onClick={this.changeMethod}/>
-                        <input className="button4" type="button" value="DELETE" onClick={this.changeMethod}/>
-
-                    </div>
-                </form>
-                
-                   <textarea  value =  {this.state.method+ ' ' + this.state.url} />
-                                 
-              
-
-                </div>
-          
-
-        )
-    }
+              <label htmlFor="json">POST or PUT request</label>
+              <textarea
+                onChange={handlebody} type="textarea"  defaultValue="{}"  />
+            </div>
+            </div>
+            </div>
+        </form>
+ 
+    </>
+  );
 }
 
 export default Form;
