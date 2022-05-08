@@ -74,9 +74,20 @@ form {
   color: black;
 }
 
+.button5{
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.button5:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
 textarea {
 
   width: 810px;
   height: 200px;
-
+  resize: none;
+    
 }
