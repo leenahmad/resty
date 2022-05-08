@@ -1,4 +1,5 @@
 import React from "react";
+import ReactJson from 'react-json-view'
 
 import './results.scss'
 
@@ -10,9 +11,21 @@ function Results(props){
                 <p>url: {props.url}</p>
                 <p>method: {props.method}</p>
             </div>
+
+         <per > 
+             {props.data ? 
+             
             <div className="res">
-            <pre>{props.data ? JSON.stringify(props.data , undefined , 2) : null}</pre>
-         </div>
+                <h2>Headers</h2>
+                <ReactJson src={props.data.header}/>
+                <h2>
+                    Results
+                </h2>
+                <ReactJson  src={props.data}/>
+
+            </div>
+            : null}
+         </per>
         </section>
 
     );

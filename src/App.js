@@ -20,6 +20,7 @@ function App(){
   const res = await axios (requestparams.url , (requestparams.body) ? (requestparams.body) : null)
     
     const data = {
+      header: res.headers,
       results: res.data
 
     }

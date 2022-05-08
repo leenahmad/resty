@@ -70,13 +70,9 @@ function Form (props){
           </div>
        
         
-        <div>
-            <div>
-              <label htmlFor="json">POST or PUT request</label>
-              <textarea
-                onChange={handlebody} type="textarea"  defaultValue="{}"  />
-            </div>
-            </div>
+             <label >
+                    <textarea id="textarea"  type="textarea" onChange={handlebody} />
+                </label>
             </div>
         </form>
  
