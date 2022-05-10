@@ -13,7 +13,7 @@ footer{
     position: relative;
 } */
 
-footer{
+/* footer{
     position: fixed;
     font-size: 140%;
     left: 0;
@@ -25,4 +25,26 @@ footer{
     padding-top: 10px;
 
     padding-bottom: 10px;
+} */
+
+footer{
+    position:relative;
+    border: none;
+    background: rgb(0, 88, 164);
+    background-color: rgb(146, 146, 146);
+    color: #fff;
+    overflow: hidden;
+    line-height: 0px;
+    padding: 0;
+    border: none;
+    height: 80px;
+    margin-top: 265px;
+    width: 100%;
+    text-align: left;
+    padding-top: 10px;
+    font-size: 140%;
+}
+
+footer p{
+    text-align: center;
 }

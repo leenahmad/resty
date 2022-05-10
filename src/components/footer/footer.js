@@ -1,10 +1,14 @@
 import React from "react";
 
-import './footer.css'
+import './footer.scss'
 
 class Footer extends React.Component{
     render(){
-        return <footer>@ 2022 Code Fellows </footer>
+        return <footer>
+            <p>
+            @ 2022 Code Fellows 
+            </p>
+            </footer>
     }
     
 }
